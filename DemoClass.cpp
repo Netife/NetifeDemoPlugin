@@ -22,6 +22,7 @@ std::string DemoClass::DispatcherCommand(std::string commandOriginal) {
 }
 
 bool DemoClass::OnEnable() {
+    agent->LogInfo("DemoClassAgent","Catch a class:" + agent->GetRelativePluginRef("demoplugin::DemoClass").value()->GetVersion());
     agent->LogInfo("DemoClass", "DemoClass is OnEnable");
     return true;
 }
